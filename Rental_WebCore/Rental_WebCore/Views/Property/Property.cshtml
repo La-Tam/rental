@@ -1,0 +1,46 @@
+﻿@model Int32
+@{ 
+    int number = int.Parse(Model.ToString());
+    if (number == 0)
+    {
+        number = 1;
+    }
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">*@
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .treeview.propertys [data-toggle='treeview'] {
+            border-left-color: #009688;
+            background: #0d1214;
+        }
+        .treeview.propertys .treeview-menu {
+            max-height: 100vh;
+        }
+
+        .treeview.propertys .treeview-indicator {
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .treeview-item.property, .treeview-item:hover, .treeview-item:focus {
+            background: #0d1214;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #resize {
+            width: 100%; /* you can use % */
+            height: 150px;
+        }
+    </style>
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+
