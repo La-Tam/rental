@@ -10,4 +10,17 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Asset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Asset\_Layout.cshtml" />
+    <Content Remove="Views\Asset\HomeAsset.cshtml" />
+    <Content Remove="Views\Asset\TypesAsset.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Asset\_Layout.cshtml" />
+    <None Include="Views\Asset\HomeAsset.cshtml" />
+    <None Include="Views\Asset\TypesAsset.cshtml" />
+  </ItemGroup>
 </Project>
