@@ -1,0 +1,499 @@
+﻿
+@{
+    ViewData["Title"] = "DetailContract";
+}
+<head>
+    <link href="~/CSS_Rental/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="app-content">
+        <div class="page-header">
+            <div class="tile-title-w-btn">
+                <h2 class="title" id="navs" style="color:#009688">THÔNG TIN HỢP ĐỒNG</h2>
+               
+            </div>
+            @* Duong dan tab  *@
+            <div class="row" style="margin-bottom:2rem;">
+                <div class="col-lg-12">
+                    <div class="bs-component">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#DC_detail"><i class="icon fa fa-info"></i> Chi tiết hợp đồng</a></li>
+                            <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#property"><i><img src="~/images/Rental/Contract/icons8-user-30.png" style="margin-top:-6px;width:20px"/></i> Khách thuê</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#asset"><i><img src="~/images/Rental/Contract/icons8-time-machine-30.png"style="width:20px;margin-top:-6px" /></i> Lịch sử hóa đơn</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#asset"><i class="icon fa fa-diamond"></i> Tài sản bàn giao</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#asset"><i><img src="~/images/Rental/Contract/icons8-dirt-bike-30.png"style="margin-top:-6px" /></i> Phương tiện</a></li>
+                        </ul>
+                        @* Chi tiet *@
+                        <div class="tab-content " id="myTabContent">
+                            <div class="tab-pane fade active show" id="DC_detail">
+                                <div class="tile">
+                                   
+                                    <div class="row">
+                                        @* VT *@
+                                        @* Thong tin hop dong *@
+                                        <div class="col-md-6">
+                                            <div class="tile">
+                                                <h3 class="tile-title">Thông tin hợp đồng</h3>
+                                                <hr />
+                                                <div class="tile-body">
+                                                    <form class="form-horizontal">
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Mã hợp đồng</label>
+                                                            <div class="col-md-8">
+                                                                
+                                                                <input class="text-body col-md-8"  type="text"disabled=""  value="HD-123456789">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Ngày tạo hợp đồng</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-8" type="text"disabled="" value="18/1/2019">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Ngày hiệu lực</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-8" type="text"disabled="" value="25/1/2019">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Đến ngày</label>
+                                                            <div class="col-md-8">
+                                                               <input class="text-body col-md-8" type="text"disabled="" value="25/6/2019">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Dự án</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Tòa nhà</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="Vina-phone">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Tầng</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="Tầng 2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Phòng</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text" disabled=""value="P.103">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Loại sản phẩm</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text" disabled=""value="3 phòng ngủ">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Giá</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="8.000.000">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Tiền cọc</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text" disabled="" value="5.000.000">
+                                                               
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-3">Ghi chú</label>
+                                                            <div class="col-md-9">
+                                                                <textarea class="text-body" rows="4" placeholder="Note"disabled="" style="width:333px"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @*VP *@
+                                        @* Thong tin khach *@
+                                        <div class="col-md-6">
+                                            <div class="tile">
+                                                <h3 class="tile-title">Thông tin khách thuê</h3>
+                                                <hr />
+                                                <div class="tile-body">
+                                                    <form class="form-horizontal">
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Tên khách thuê</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="Trân Thanh Thúy">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Điện thoại</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text" disabled=""value="0771235469">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">CMND</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="025623125">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-4">Email</label>
+                                                            <div class="col-md-8">
+                                                                <input class="text-body col-md-12 " type="text"disabled="" value="chomuonac@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label class="control-label col-md-3">Ghi chú</label>
+                                                            <div class="col-md-9">
+                                                                <textarea class="text-body" rows="4" placeholder="Note"disabled="" style="width:333px"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            @* Dich vu *@
+                                            <div class="tile">
+                                                <div class="row">
+                                                    <h3 class="tile-title">Đăng ký dịch vụ</h3>
+                                                    <button class="btn-outline-primary" style="margin-left:150px;border-color:darkgray;border:solid 1px ;height:30px">
+                                                        <span>
+                                                            <img src="~/images/Rental/Contract/icons8-add-new-filled-50.png" style="width:25px" />
+                                                            <samp>Thêm dịch vụ</samp>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <hr style="margin-top:-0px" />
+                                                <div style="  height:181px; border:1px solid black; padding:20px; overflow:auto;border-color:darkgray">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:25px"><img src="~/images/Rental/Contract/icons8-checkmark-filled-50.png" style="width:20px" /></th>
+                                                                <th class="col-md-3" >Loại dịch vụ</th>
+                                                                <th style="text-align:center;width:15px">Số lượng</th>
+                                                                <th>Đơn giá</th>
+                                                                <th >Đơn vị</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><input class="checkbox" type="checkbox"checked="checked" /></td>
+                                                                <td>
+                                                                    <input class="text-body  "style="width:80px" disabled="" type="text" value="Internet  ">
+                                                                </td>
+                                                                <td><input class="text-center " type="text" style="width:25px" value="1" disabled="" /></td>
+                                                                <td><input class="text-dark "style="width:80px" type="text" value="200.000"disabled="" /></td>
+                                                                <td>
+                                                                    <input class="text-body  "style="width:80px" disabled="" type="text" value="Đồng/Tháng ">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input class="checkbox" type="checkbox" checked="checked"/></td>
+                                                                <td>
+                                                                    <input class="text-body "style="width:80px" disabled="" type="text" value="Cáp  ">
+                                                                </td>
+                                                                <td><input class="text-center " type="text" style="width:25px" value="1" disabled="" /></td>
+                                                                <td><input class="text-dark " style="width:80px"type="text"value="150.000"disabled="" /></td>
+                                                                <td>
+                                                                    <input class="text-body  " style="width:80px" disabled="" type="text" value="Đồng/Tháng ">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input class="checkbox" type="checkbox" checked="checked"/></td>
+                                                                <td>
+                                                                    <input class="text-body  "style="width:80px" disabled="" type="text" value="Đổ rác  ">
+                                                                </td>
+                                                                <td><input class="text-center " style="width:25px" type="text" value="1" disabled="" /></td>
+                                                                <td><input class="text-dark "style="width:80px" type="text" value="30.000"disabled=""/></td>
+                                                                <td>
+                                                                    <input class="text-body  "style="width:80px" disabled="" type="text" value="Đồng/Tháng ">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <hr style="margin-top:-10px" />
+                                    <div class="row">
+                                        <button class="btn-outline-primary" style="margin-left:20px;width:110px;border:1px solid"><i><img src="~/images/Rental/Contract/icons8-edit-file-30.png" style="width:20px; margin-top:-6px;" /></i> Chỉnh sửa</button>
+                                        <button class="btn-outline-primary" style="margin-left:30px;width:120px;border:1px solid"><i><img src="~/images/Rental/Contract/icons8-print-30.png" style="width:20px; margin-top:-6px" /></i> In hợp đồng</button>
+                                        <button class="btn-outline-primary" style="margin-left:30px;width:90px;border:1px solid"><i><img src="~/images/Rental/Contract/icons8-exit-30.png" style="width:20px; margin-top:-6px" /></i> Thoát ra</button>
+                                    </div>
+
+                                            
+
+                                       
+                                    
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="property">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="asset">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="card mb-3 border-success">
+                                            <div class="card-body">
+                                                <blockquote class="card-blockquote">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                    <footer>
+                                                        Someone famous in
+                                                        <cite title="Source Title">Source Title</cite>
+                                                    </footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>

@@ -8,23 +8,28 @@
 <head>
     <link rel="icon" type="imag/png" href="../images/favicon.ico">
     <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    
+
     <!-- Open Graph Meta-->
     <title>Home Rental</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="~/CSS_Rental/css/main.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        a.text:hover, a.text:focus {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body class="app sidebar-mini rtl">
     <!-- Navbar-->
     <header class="app-header">
-        <a class="app-header__logo" a asp-area="" asp-controller="Home" asp-action="Index">Rental</a>
+        <a class="app-header__logo" asp-area="" asp-controller="Home" asp-action="Index">Rental</a>
         <!-- Sidebar toggle button-->
-        <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+        <a class="app-nav__item text" asp-area="" asp-controller="Property" asp-action="AddNew" style="font-size: 20px"><i class="icon fa fa-plus-square-o"></i> Thêm mới</a>
         <!-- Navbar Right Menu-->
         <ul class="app-nav">
             <li class="app-search">
@@ -112,21 +117,23 @@
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
         <ul class="app-menu">
-            <li class="treeview propertys">
-                <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-building-o"></i><span class="app-menu__label">Quản lý Bất động sản</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+            <li align="center"><a class="app-sidebar__toggle" style="background-color:#222d32" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a></li>
+            <li><a class="app-menu__item property" asp-area="" asp-controller="Property" asp-action="ListProperty"><i class="app-menu__icon fa fa-building-o"></i><span class="app-menu__label">Quản lý bất động sản</span></a></li>
+            <li class="treeview">
+                <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-briefcase"></i><span class="app-menu__label">Quản lý cho thuê</span><i class="treeview-indicator fa fa-angle-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a class="treeview-item property" asp-area="" asp-controller="Property" asp-action="Property"><i class="icon fa fa-circle-o"></i> Bất động sản</a></li>
-                    <li><a class="treeview-item list-property" asp-area="" asp-controller="Property" asp-action="ListProperty"><i class="icon fa fa-circle-o"></i> Danh sách sản phẩm</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="RentalManager" asp-action="DashboardIndex"><i class="icon fa fa-circle-o"></i> Dashboard cho thuê</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="RentalManager" asp-action="ContractIndex"><i class="icon fa fa-circle-o"></i> Hợp đồng</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="RentalManager" asp-action="ElectricityAndWaterIndex"><i class="icon fa fa-circle-o"></i> Chốt điện nước</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="RentalManager" asp-action="InvoiceIndex"><i class="icon fa fa-circle-o"></i> Thu phí</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="RentalManager" asp-action="SettingServiceIndex"><i class="icon fa fa-circle-o"></i> Cài đặt bảng giá dịch vụ</a></li>
                 </ul>
             </li>
             <li class="treeview">
-                <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-briefcase"></i><span class="app-menu__label">Quản lý Cho thuê</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+                <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-diamond"></i><span class="app-menu__label">Quản lý tài sản</span><i class="treeview-indicator fa fa-angle-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a class="treeview-item" asp-area="" asp-controller="Home" asp-action="Index"><i class="icon fa fa-circle-o"></i> Dashboard cho thuê</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Contract"><i class="icon fa fa-circle-o"></i> Hợp đồng</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="ElectricityAndWaterIndex"><i class="icon fa fa-circle-o"></i> Chốt điện nước</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Fee"><i class="icon fa fa-circle-o"></i> Thu phí</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="SettingServiceFee"><i class="icon fa fa-circle-o"></i> Cài đặt bảng giá dịch vụ</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="Home" asp-action="Index"><i class="icon fa fa-circle-o"></i> Loại tài sản</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Contract"><i class="icon fa fa-circle-o"></i> Tài sản theo bất động sản</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -140,16 +147,17 @@
             <li class="treeview">
                 <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-wrench"></i><span class="app-menu__label">Quản lý sửa chữa</span><i class="treeview-indicator fa fa-angle-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Dashboard"><i class="icon fa fa-circle-o"></i> Dashboard QTTB</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Repair"><i class="icon fa fa-circle-o"></i> Bảo trì sửa chữa</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="ToDoList"><i class="icon fa fa-circle-o"></i> Công việc thực hiện</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="Maintenance" asp-action="DashBoarchQLBTT"><i class="icon fa fa-circle-o"></i> Dashboard QTTB</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="Maintenance" asp-action="Maintenance"><i class="icon fa fa-circle-o"></i> Bảo trì sửa chữa</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="Maintenance" asp-action="Task"><i class="icon fa fa-circle-o"></i> Công việc thực hiện</a></li>
+                    
                 </ul>
             </li>
             <li class="treeview">
                 <a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-money"></i><span class="app-menu__label">Quản lý tài chính</span><i class="treeview-indicator fa fa-angle-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Dashboard"><i class="icon fa fa-circle-o"></i> Quản lý thu</a></li>
-                    <li><a class="treeview-item" asp-area="" asp-controller="Property" asp-action="Repair"><i class="icon fa fa-circle-o"></i> Quản lý chi</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="FinanceManagement" asp-action="Thu"><i class="icon fa fa-circle-o"></i> Quản lý thu</a></li>
+                    <li><a class="treeview-item" asp-area="" asp-controller="FinanceManagement" asp-action="Chi"><i class="icon fa fa-circle-o"></i> Quản lý chi</a></li>
                 </ul>
             </li>
             <li><a class="app-menu__item" asp-area="" asp-controller="Property" asp-action="Report"><i class="app-menu__icon fa fa-flag"></i><span class="app-menu__label">Báo cáo</span></a></li>
@@ -172,6 +180,7 @@
             </li>
         </ul>
     </aside>
+    @RenderBody()
     <!-- Essential javascripts for application to work-->
     <script src="~/js/jquery-3.2.1.min.js"></script>
     <script src="~/js/popper.min.js"></script>
@@ -195,6 +204,6 @@
             ga('send', 'pageview');
         }
     </script>
-    @RenderBody();
+   
 </body>
 </html>

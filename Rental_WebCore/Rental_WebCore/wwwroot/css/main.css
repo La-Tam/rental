@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * Vali Admin
  * Author: Pratik Borsadiya
@@ -1680,16 +1680,15 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  
 }
 
 .table .table {
@@ -1702,12 +1701,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  
 }
 
 .table-bordered thead th,
@@ -1874,7 +1873,7 @@ pre code {
 .table .thead-light th {
   color: #495057;
   background-color: #e9ecef;
-  border-color: #dee2e6;
+ 
 }
 
 .table-dark {
@@ -3785,7 +3784,7 @@ input[type="button"].btn-block {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #dee2e6;
+  
 }
 
 .custom-control-label::after {

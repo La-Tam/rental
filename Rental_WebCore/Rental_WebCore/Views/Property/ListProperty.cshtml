@@ -1,34 +1,55 @@
-﻿
-@{
-    ViewData["Title"] = "ListProperty";
+﻿@{
+    string[] name = new string[12];
+    int i = 0;
 }
 <style>
-    .treeview.propertys [data-toggle='treeview'] {
-        border-left-color: #009688;
-        background: #0d1214;
-    }
-
-    .treeview.propertys .treeview-menu {
-        max-height: 100vh;
-    }
-
-    .treeview.propertys .treeview-indicator {
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-    }
-
-    .treeview-item.list-property, .treeview-item:hover, .treeview-item:focus {
+    .app-menu__item.property, app-menu__item:hover, app-menu__item:focus {
         background: #0d1214;
         text-decoration: none;
         color: #fff;
     }
-
-    #resize {
-        width: 100%; /* you can use % */
-        height: 150px;
-    }
 </style>
-<main class="app-content">
-    <h2>ListProperty</h2>
+<main class="app-content" style="margin-top:20px">
+    <div class="row">
+        <div class="col-lg-3">
+            <p class="bs-component">
+                <div class="form-group">
+                    <select class="form-control" id="exampleSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="tile mb-4" style="min-height: calc(90vh - 50px);">
+            <div class="page-header">
+                <div class="tile-title-w-btn">
+                    <h2 class="title" id="navs" style="color:#009688">Danh sách bất động sản</h2>
+                </div>
+            </div>
+            @for (var k = 0; k < 4; k++)
+            {
+                <div class="row">
+                    @for (var j = 0; j < 3; j++)
+                    {
+                        <div class="col-lg-4">
+                            @{name[i] = "Bất động sản " + (i + 1);
+                                <a class="list-group-item list-group-item-action" href="/Property?=@name[i]" style="border-color:#009688">
+                                    <h4 class="list-group-item-heading">@name[i]</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                i = i + 1;
+                            }
+                        </div>
+                    }
+                </div>
+                <br />
+            }
+        </div>
+    </div>
 </main>

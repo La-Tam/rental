@@ -1,0 +1,232 @@
+﻿
+@{
+    ViewData["Title"] = "Maintenance";
+}
+<link href="~/css/main.css" rel="stylesheet" />
+
+<body>
+    <main class="app-content">
+        @{
+            ViewBag.Title = "Maintenance";
+        }
+        <div id="page_header" class="widget-box  ">
+            <div class="widget-header" style="border-radius:4px">
+                <h3 class="widget-title">
+                    <i class="ace-icon fa fa-star orange"></i>
+                    Danh sách bảo trì sửa chửa
+                </h3>
+
+            </div>
+            <div class="tile">
+                <div class="widget-main">
+                    <form action="/Maintenance/Index" class="search-view form-inline" id="Maintenance" method="get">
+                        <p>
+                            <input autocomplete="off" class="form-control" id="Name" name="Name" placeholder="Tên bảo trì..." type="text" value="">
+                            <select id="Type" name="Type" class="form-control" style="height: 35px;width:150px">
+                                <option value="">Loại</option>
+                                <option value="SCPS">Sự cố phát sinh</option>
+                                <option value="KHDK">Kế hoạch định kỳ</option>
+                            </select>
+
+                            <select id="Status" class="form-control" name="Status" style="height: 35px;width:150px">
+                                <option value="">Trạng thái</option>
+                                <option value="pending">Chờ thực hiện</option>
+                                <option value="inprogress">Đang thực hiện</option>
+                                <option value="complete">Đã hoàn thành</option>
+                            </select>
+                        </p>
+
+                    </form>
+                    <p style="margin:0px;">
+                        <button class="btn btn-mini btn-primary" name="" onclick="return true;" type="submit" value="Search" style="background-color:#009688">
+                            <span>Tìm kiếm</span>
+                            <i class="ace-icon fa fa-search"></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <table class="table" style="margin-top:15px">
+
+                <thead>
+                    <tr>
+                        <th>Trạng thái</th>
+                        <th>Tên</th>
+                        <th>Loại</th>
+                        <th>Ghi chú</th>
+                        <th>Ngày tạo</th>
+                        <th>Ngày cập nhật</th>
+                        <th>hoạt động</th>
+                    </tr>
+                <thead>
+                <tbody>
+                <tbody>
+                    <tr>
+                        <td>độ ưu tiên</td>
+                        <td><a asp-controller="Maintenance" asp-action="DetailMaintenance">abc</a></td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td><button class="fa fa-trash" aria-hidden="true" style="margin-left:0px; margin-right:10px"></button><button class="fa fa-edit"  style="color:black" onclick="EditMaintenance(0)"></button></td>
+                    </tr>
+                    <tr>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td><button class="fa fa-trash" aria-hidden="true" style="margin-left:0px; margin-right:10px"></button><button class="fa fa-edit" style="color:black" onclick="EditMaintenance(0)"></button></td>
+                    </tr>
+                    <tr>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td><button class="fa fa-trash" aria-hidden="true" style="margin-left:0px; margin-right:10px"></button><button class="fa fa-edit" style="color:black" onclick="EditMaintenance(0)"></button></td>
+                    </tr>
+                    <tr>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td><button class="fa fa-trash" aria-hidden="true" style="margin-left:0px; margin-right:10px"></button><button class="fa fa-edit" style="color:black" onclick="EditMaintenance(0)"></button></td>
+                    </tr>
+                    <tr>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td><button class="fa fa-trash" aria-hidden="true" style="margin-left:0px; margin-right:10px"></button><button class="fa fa-edit" style="color:black" onclick="EditMaintenance(0)"></button></td>
+                    </tr>
+                    <tr>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td>độ ưu tiên</td>
+                        <td>aa</td>
+                        <td><button class="fa fa-trash" aria-hidden="true" style="margin-left:0px; margin-right:10px"></button><button class="fa fa-edit" style="color:black" onclick="EditMaintenance(0)"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">»</a></li>
+                </ul>
+            </div>
+        </div>
+        <a class="btn btn-primary icon-btn" style="background-color:#007d71; margin-top:25px" onclick="AddMaintenance(0)"><i class="fa fa-plus"></i>Thêm mới</a>
+    </main>
+</body>
+<!--Add new Maintenance -->
+<div class="modal fade" id="Mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitle ;">
+                Thêm mới
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="exampleSelect1">Loại</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>Sự cố phát sinh</option>
+                                    <option>Thấp</option>
+                                    <option>Trung bình</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tên</label>
+                                <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập tên">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleTextarea">Ghi chú</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+
+                            <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                            <button class="btn btn-primary" style="background-color: #007065" data-dismiss="modal">Hủy</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<!--Edit Maintenance -->
+
+<div class="modal fade" id="Mymodal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <text class="form-control" style="background-color:#007065; height:50px;color:aliceblue;border:hidden; text-align:center;font-size:25px; padding-left:0px;border-radius:unset" id="modalTitle ;">
+                Thêm mới
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; font-size:30px">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </text>
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <form id="form1">
+                    <div class="form-group">
+                        <label for="exampleSelect1">Loại</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>Sự cố phát sinh</option>
+                            <option>Thấp</option>
+                            <option>Trung bình</option>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Tên</label>
+                        <input class="form-control" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Nhập tên">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleTextarea">Ghi chú</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    </div>
+
+                    <a class="btn btn-primary" style="background-color: #007065;color:white">Lưu</a>
+                    <a class="btn btn-primary" style="background-color: #007065" data-dismiss="modal">Hủy</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<script>
+    function AddMaintenance(StudentId) {
+        $("#form")[0].reset();
+        $("#modalTitle").html("Thêm mới công việc");
+        $("#Mymodal").modal();
+    }
+    function EditMaintenance(EditId) {
+        $("#form1")[0].reset();
+        $("#modalTitle1").html("Chỉnh sửa bảo trì");
+        $("#Mymodal1").modal();
+    }
+</script>

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * Vali Admin
  * Author: Pratik Borsadiya
@@ -114,7 +114,9 @@ address {
 }
 
 ol,
-ul,
+ul {
+    list-style: none
+}
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -14871,12 +14873,18 @@ be a descendant of the grid when it is being dragged.
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
+ 
 }
-
+.loginwith {
+    margin-left:7px;
+    width:auto;
+    height:auto;
+    float:left;
+}
 .login-content .logo {
-  margin-bottom: 40px;
-  font-family: "Niconne";
-  color: #fff;
+    margin-bottom: 40px;
+    font-family: "Niconne";
+    color: #fff;
 }
 
 .login-content .logo h1 {
@@ -14885,24 +14893,24 @@ be a descendant of the grid when it is being dragged.
 }
 
 .login-content .login-box {
-  position: relative;
-  min-width: 350px;
-  min-height: 390px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
-  -webkit-perspective: 800px;
-          perspective: 800px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+    position: relative;
+    min-width: 350px;
+    min-height: 452px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .login-content .login-box .login-head {
   margin-top: 0;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
   text-align: center;
 }
 
@@ -15227,4 +15235,58 @@ be a descendant of the grid when it is being dragged.
 
 .user .user-settings label {
   color: #666;
+}
+i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
+    border-right: 1px dotted #FFF;
+    padding-right: .5em;
+    margin-right: .5em;
+    width: 25px;
+}
+.header-social.wthree {
+    margin: 1% 1%;
+}
+@media screen and (max-width: 1050px) {
+  
+    .header-social.wthree {
+        margin: 19.3% 9%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .header-social.wthree {
+        margin: 20% 9%;
+    }
+}
+@media screen and (max-width: 768px) {
+  
+    .header-social.wthree {
+        margin: 20% 9%;
+    }
+}
+@media screen and (max-width: 667px) {
+    
+    .header-social.wthree {
+        margin: 22% 9%;
+    }
+}
+@media screen and (max-width: 603px) {
+    
+
+    .header-social.wthree {
+        margin: 12% 9%;
+    }
+
+}
+@media screen and (max-width: 320px) {
+
+
+    .header-social.wthree {
+        margin: 10% 5%;
+    }
+
+    i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
+        width: 19px;
+    }
+
 }
