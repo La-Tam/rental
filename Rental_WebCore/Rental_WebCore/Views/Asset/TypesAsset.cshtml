@@ -2,7 +2,6 @@
     ViewData["Title"] = "TypesAsset";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="~/Content/main.css" rel="stylesheet" type="text/css" />
 <head>
     <style>
@@ -72,261 +71,176 @@
             </div>
         </div>
     </div>
-    <div class="tile">
-        <table class="table table-condensed" style="border-collapse:collapse;">
-
-            <thead>
-                <tr>
-                    <th>ID Asset</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-
-
-            <tbody>
-                <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
-                    <td> TV001</td>
-                    <td> Tivi</td>
-                    <td> </td>
-                    <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><span><strong> Detail</strong></span></button></td>
-                </tr>
-                <tr>
-                    <td colspan="12" class="hiddenRow">
-                        <div class="accordian-body collapse" id="demo1">
-                            <table class="table table-striped">
+        <div class="tile">
+            <div class="tile-body">
+                <div id="sampleTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="sampleTable_length"><label>Show <select name="sampleTable_length" aria-controls="sampleTable" class="form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="sampleTable_filter" class="dataTables_filter"></div></div></div><div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-hover table-bordered dataTable no-footer" id="sampleTable" role="grid" aria-describedby="sampleTable_info" style="border-collapse:collapse;">
                                 <thead>
-                                   <a></a>
-                                    <tr>
-                                        <th> Images</th>
-                                        <th> Secret Key</th>
-                                        <th> Status </th>
-                                        <th> Created</th>
-                                        <th> Expires</th>
-                                        <th> Actions</th>
+                                    <tr role="row">
+                                    <th tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 115px;">Asset ID</th>
+                                    <th tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 100px;">Type</th>
+                                    <th tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 82px;">Office</th>
+                                    <th tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 32px;">Age</th>
+                                    <th tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 80px;">Start date</th>
+                                    <th tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 163px;">Salary</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><a href="Picture"> &#9968;</a></td>
-                                        <td>secretKey-1</td>
-                                        <td>Status</td>
-                                        <td>some date</td>
-                                        <td>some date</td>
+                                    <tr data-toggle="collapse" role="row" class="odd">
+                                        <td class="sorting_1">Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>33</td>
+                                        <td>2008/11/28</td>
                                         <td>
-
-                                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                                                <span><button type="button" class="btn btn-primary a-btn-slide-text" data-toggle="modal" data-target="#myUpdate">Add Asset</button></span>
-                                                <div class="modal fade" id="myUpdate" role="dialog">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div id="modal-header" class="modal-header">
-                                                                <h4 class="modal-title">Add New Asset</h4>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-md-10 col-md-offset-1">
-                                                                    <form class="form-horizontal" role="form">
-                                                                        <fieldset>
-
-                                                                            <!-- Form Name -->
-                                                                            <legend> Asset Details</legend>
-
-                                                                            <!-- Text input-->
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-2 control-label" for="textinput"> Loại Tài Sản</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <!--<input type="text" placeholder="Address Line 1" class="form-control">-->
-                                                                                    <select id="Type" name="Type" style="height: 32px;width:150px">
-                                                                                        <option value="">Loại</option>
-                                                                                        <option value="All">Tất Cả</option>
-                                                                                        <option value="TV">Tivi</option>
-                                                                                        <option value="Refri">Tủ Lạnh</option>
-                                                                                        <option value="Washing">Máy Giặt</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <!-- Text input-->
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-2 control-label" for="textinput"> Tên Tài Sản </label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" placeholder="Address Line 2" class="form-control">
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <!-- Text input-->
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-2 control-label" for="textinput"> Số Lượng</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" placeholder="City" class="form-control">
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <!-- Text input-->
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-2 control-label" for="textinput"> Hãng</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" placeholder="State" class="form-control">
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- Text input-->
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-2 control-label" for="textinput"> Mô Tả</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" placeholder="Country" class="form-control">
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <!-- Text input-->
-                                                                            <div class="form-group">
-                                                                                <label class="col-sm-2 control-label" for="textinput"> Thêm Ảnh</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="file" name="pic" accept="image/*">
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="form-group">
-                                                                                <div class="col-sm-offset-2 col-sm-10">
-                                                                                    <div class="pull-right">
-                                                                                        <button type="submit" class="btn btn-default">Cancel</button>
-                                                                                        <button type="submit" class="btn btn-primary">Save</button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </fieldset>
-                                                                    </form>
-
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                            <p class="bs-component">
+                                                <button class="btn btn-warning" type="button">Update</button>
+                                                <button class="btn btn-secondary" type="button">Asign</button>
+                                                <button class="btn btn-danger" type="button">Delete</button>
+                                            </p>
                                         </td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="sorting_1">Angelica Ramos</td>
+                                        <td>Chief Executive Officer (CEO)</td>
+                                        <td>London</td>
+                                        <td>47</td>
+                                        <td>2009/10/09</td>
+                                        <td>$1,200,000</td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1">Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td>66</td>
+                                        <td>2009/01/12</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="sorting_1">Bradley Greer</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>41</td>
+                                        <td>2012/10/13</td>
+                                        <td>$132,000</td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1">Brenden Wagner</td>
+                                        <td>Software Engineer</td>
+                                        <td>San Francisco</td>
+                                        <td>28</td>
+                                        <td>2011/06/07</td>
+                                        <td>$206,850</td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="sorting_1">Brielle Williamson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>New York</td>
+                                        <td>61</td>
+                                        <td>2012/12/02</td>
+                                        <td>$372,000</td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1">Bruno Nash</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td>38</td>
+                                        <td>2011/05/03</td>
+                                        <td>$163,500</td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="sorting_1">Caesar Vance</td>
+                                        <td>Pre-Sales Support</td>
+                                        <td>New York</td>
+                                        <td>21</td>
+                                        <td>2011/12/12</td>
+                                        <td>$106,450</td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1">Cara Stevens</td>
+                                        <td>Sales Assistant</td>
+                                        <td>New York</td>
+                                        <td>46</td>
+                                        <td>2011/12/06</td>
+                                        <td>$145,600</td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="sorting_1">Cedric Kelly</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td>22</td>
+                                        <td>2012/03/29</td>
+                                        <td>$433,060</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </td>
-                </tr>
-                <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
-                    <td>
-                        <button class="btn btn-default btn-xs">
-                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                            <span><strong>Update</strong></span>>
-                        </button>
-                    </td>
-                    <td>OBS Name</td>
-                    <td>OBS Description</td>
-                    <td>hpcloud</td>
-
-                </tr>
-                <tr>
-                    <td colspan="6" class="hiddenRow"><div id="demo2" class="accordian-body collapse">Demo2</div></td>
-                </tr>
-                <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
-                    <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
-                    <td>OBS Name</td>
-                    <td>OBS Description</td>
-                    <td>hpcloud</td>
-
-                </tr>
-                <tr>
-                    <td colspan="6" class="hiddenRow"><div id="demo3" class="accordian-body collapse">Demo3</div></td>
-                </tr>
-            </tbody>
-        </table>
+                    </div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="sampleTable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="sampleTable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="sampleTable_previous"><a href="#" aria-controls="sampleTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="sampleTable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="sampleTable_next"><a href="#" aria-controls="sampleTable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div>
+                </div>
+            </div>
             <span><button type="button" class="btn btn-primary a-btn-slide-text" data-toggle="modal" data-target="#myModal">Add Asset</button></span>
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div id ="modal-header" class="modal-header">
-                        <h4 class="modal-title">Add New Asset</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <form class="form-horizontal" role="form">
-                                <fieldset>
-
-                                    <!-- Form Name -->
-                                    <legend> Asset Details</legend>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" for="textinput"> Loại Tài Sản</label>
-                                        <div class="col-sm-10">
-                                            <!--<input type="text" placeholder="Address Line 1" class="form-control">-->
-                                            <select id="Type" name="Type" style="height: 32px;width:150px">
-                                                <option value="">Loại</option>
-                                                <option value="All">Tất Cả</option>
-                                                <option value="TV">Tivi</option>
-                                                <option value="Refri">Tủ Lạnh</option>
-                                                <option value="Washing">Máy Giặt</option>
-                                            </select>
+                    <div class="tile">
+                        <h3 class="tile-title">Add Asset</h3>
+                        <div class="tile-body">
+                            <form>
+                                <div class="form-group">
+                                    <label class="control-label">Loại Tài Sản</label>
+                                    <input class="form-control" type="text" placeholder="Enter full name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tên Tài Sản</label>
+                                    <input class="form-control" type="email" placeholder="Asset Name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Số Lượng</label>
+                                    <input class="form-control" type="text" placeholder="Number Of Asset"></input>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Đánh Giá Tình Trạng</label>
+                                    <input class="form-control" type="text" placeholder="Number Of Asset"></input>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Ngày Thêm</label>
+                                     <input type="text" class="form-control" placeholder="Day Created">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Gender</label>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="gender">Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" name="gender">Female
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Thêm Hình Ảnh</label>
+                                    <input class="form-control" type="file">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                                        <label class="form-check-label" for="invalidCheck3">
+                                            Agree to terms and conditions
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
                                         </div>
                                     </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" for="textinput"> Tên Tài Sản </label>
-                                        <div class="col-sm-10">
-                                            <input type="text" placeholder="Address Line 2" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" for="textinput"> Số Lượng</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" placeholder="City" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" for="textinput"> Hãng</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" placeholder="State" class="form-control">
-                                        </div>
-                                    </div>
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" for="textinput"> Mô Tả</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" placeholder="Country" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <!-- Text input-->
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label" for="textinput"> Thêm Ảnh</label>
-                                        <div class="col-sm-10">
-                                            <input type="file" name="pic" accept="image/*">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <div class="pull-right">
-                                                <button type="submit" class="btn btn-default">Cancel</button>
-                                                <button type="submit" class="btn btn-primary">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </fieldset>
+                                </div>
                             </form>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-
+                        </div>
+                        <div class="tile-footer">
+                            <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Submit</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
                         </div>
                     </div>
                 </div>
